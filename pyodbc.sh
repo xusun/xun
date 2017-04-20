@@ -5,7 +5,9 @@ sudo su
 sudo dpkg --configure -a
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql.list
+echo `date` >> /tmp/pyodbcpackage.log
 exit
+echo downloaded >> /tmp/pyodbcpackage.log
 sudo dpkg --configure -a
 sudo apt-get update
 echo start install pyodbc
