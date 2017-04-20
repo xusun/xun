@@ -2,10 +2,14 @@
 
 echo `date` >>/tmp/datelog.txt
 sudo su
+echo `date` >>/tmp/pyodbcinstall.log
+echo 'su' >>/tmp/pyodbcinstall.log
 sudo dpkg --configure -a
+echo 'dpkg --config' >>/tmp/pyodbcinstall.log
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql.list
-echo `date` >> /tmp/pyodbcpackage.log
+echo 'curled' >> /tmp/pyodbcinstall.log
+echo `date` >>/tmp/pyodbcpackage.log
 exit
 echo downloaded >> /tmp/pyodbcpackage.log
 sudo dpkg --configure -a
