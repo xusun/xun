@@ -8,6 +8,11 @@ curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sou
 exit
 sudo dpkg --configure -a
 sudo apt-get update
+echo start install pyodbc
+echo `date` >> /tmp/pyodbc.log
 sudo -H pip install pyodbc
+
+echo start install msodbcsql
+echo `date` >> /tmp/msodbcsql.log
 sudo ACCEPT_EULA=Y apt-get --assume-yes install msodbcsql=13.1.4.0-1 mssql-tools=14.0.3.0-1 unixodbc-dev
 echo `date` >>/tmp/datelog.txt
