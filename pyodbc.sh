@@ -14,11 +14,14 @@ echo 'downloaded' >>/tmp/pyodbcpackage.log
 sudo dpkg --configure -a
 #sudo apt-get update
 echo 'updated' >>/tmp/pyodbcinstall.log
-echo start install pyodbc
+echo start install pyodbc >>/tmp/pyodbcinstall.log
 echo `date` >>/tmp/pyodbc.log
-sudo -H pip install pyodbc
+sudo -H pip install pyodbc >>/tmp/pyodbcinstall.log
 
-echo start install msodbcsql
+echo start install msodbcsql >>/tmp/pyodbcinstall.log
 echo `date` >>/tmp/msodbcsql.log
-sudo ACCEPT_EULA=Y apt-get --assume-yes install msodbcsql=13.1.4.0-1 mssql-tools=14.0.3.0-1 unixodbc-dev
+sudo ACCEPT_EULA=Y apt-get --assume-yes install msodbcsql=13.1.4.0-1 mssql-tools=14.0.3.0-1 unixodbc-dev >>/tmp/pyodbcinstall.log
 echo `date` >>/tmp/datelog.txt
+echo `date` >>/tmp/pyodbcinstall.log
+echo 'install completed' >>/tmp/pyodbcinstall.log
+echo '----------------------' >>/tmp/pyodbcinstall.log
