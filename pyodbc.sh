@@ -12,7 +12,7 @@ echo 'curled' >> /tmp/pyodbcinstall.log
 echo `date` >>/tmp/pyodbcpackage.log
 echo 'downloaded' >> /tmp/pyodbcpackage.log
 sudo dpkg --configure -a
-sudo apt-get update
+#sudo apt-get update
 echo 'updated' >>/tmp/pyodbcinstall.log
 echo start install pyodbc
 echo `date` >> /tmp/pyodbc.log
