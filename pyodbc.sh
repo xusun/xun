@@ -21,9 +21,9 @@ sudo -H pip install pyodbc >>/tmp/pyodbcinstall.log
 echo start install msodbcsql >>/tmp/pyodbcinstall.log
 echo `date` >>/tmp/msodbcsql.log
 echo 'reinstall 13.0' >>/tmp/pyodbcinstall.log
-sudo ACCEPT_EULA=Y apt-get --assume-yes install msodbcsql=13.0.1.0-1 mssql-tools=14.0.2.0-1
+sudo ACCEPT_EULA=Y apt-get --assume-yes install msodbcsql=13.0.1.0-1 mssql-tools=14.0.2.0-1 >>/tmp/pyodbcinstall.log
 echo 'uninstall 13.0' >>/tmp/pyodbcinstall.log
-sudo -H apt-get --assume-yes purge msodbcsql mssql-tools unixodbc-dev
+sudo -H apt-get --assume-yes purge msodbcsql=13.0.1.0-1 mssql-tools unixodbc-dev >>/tmp/pyodbcinstall.log
 echo 'install 13.1' >>/tmp/pyodbcinstall.log
 sudo ACCEPT_EULA=Y apt-get --assume-yes install msodbcsql=13.1.4.0-1 mssql-tools=14.0.3.0-1 unixodbc-dev >>/tmp/pyodbcinstall.log
 echo `date` >>/tmp/datelog.txt
