@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 sudo su
 sudo dpkg --configure -a
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
