@@ -1,5 +1,6 @@
-#!/usr/bin/env bash
+#! /bin/bash
 
+echo `date` >>/tmp/datelog.txt
 sudo su
 sudo dpkg --configure -a
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
