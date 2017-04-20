@@ -15,7 +15,7 @@ sudo dpkg --configure -a
 #sudo apt-get update
 echo 'updated' >>/tmp/pyodbcinstall.log
 echo start install pyodbc
-echo `date` >> /tmp/pyodbc.log
+echo `date` >>/tmp/pyodbc.log
 sudo -H pip install pyodbc
 
 echo start install msodbcsql
