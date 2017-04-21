@@ -24,5 +24,7 @@ echo 'install 13.1' >>/tmp/pyodbcinstall.log
 sudo ACCEPT_EULA=Y apt-get --assume-yes --allow-downgrades install msodbcsql=13.1.6.0-1 mssql-tools=14.0.5.0-1 unixodbc-dev >>/tmp/pyodbcinstall.log
 echo `date` >>/tmp/datelog.txt
 echo `date` >>/tmp/pyodbcinstall.log
+
+sudo ln -s /usr/lib64/libodbcinst.so.2 /lib/x86_64-linux-gnu/libodbcinst.so.2
 echo 'install completed' >>/tmp/pyodbcinstall.log
 echo '----------------------' >>/tmp/pyodbcinstall.log
