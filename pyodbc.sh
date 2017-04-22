@@ -27,6 +27,7 @@ echo `date` >>/tmp/pyodbcinstall.log
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
+sudo /usr/bin/anaconda/bin/conda install -y -c anaconda pyodbc=3.0.10 >>/tmp/pyodbcinstall.og
 
 echo 'install completed' >>/tmp/pyodbcinstall.log
 echo '----------------------' >>/tmp/pyodbcinstall.log
