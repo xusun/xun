@@ -25,9 +25,9 @@ sudo ACCEPT_EULA=Y apt-get --assume-yes --allow-downgrades install msodbcsql=13.
 echo `date` >>/tmp/datelog.txt
 echo `date` >>/tmp/pyodbcinstall.log
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
-echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+echo 'export PATH="/opt/mssql-tools/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
-sudo /usr/bin/anaconda/bin/conda install -y -c anaconda pyodbc=3.0.10 >>/tmp/pyodbcinstall.og
+sudo /usr/bin/anaconda/bin/conda install -y -c anaconda pyodbc=3.0.10 >>/tmp/pyodbcinstall.log
 
 echo 'install completed' >>/tmp/pyodbcinstall.log
 echo '----------------------' >>/tmp/pyodbcinstall.log
