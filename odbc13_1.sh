@@ -7,5 +7,5 @@ sudo ACCEPT_EULA=Y apt-get --assume-yes install msodbcsql=13.1.4.0-1 mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
-sudo pip install pyodbc
+sudo -H pip install pyodbc
 sudo /usr/bin/anaconda/bin/conda update -y libgcc
