@@ -8,4 +8,5 @@ echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 sudo -H pip install pyodbc >>/tmp/log0601.txt
+sudo /usr/bin/anaconda/bin/conda install -y pyodbc >>/tmp/log0601.txt
 sudo /usr/bin/anaconda/bin/conda update -y libgcc >>/tmp/log0601.txt
