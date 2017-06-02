@@ -1,5 +1,5 @@
-#sudo apt-get -y update
-#sudo su
+sudo apt-get -y update
+sudo su
 echo curl microsoft.asc
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 echo curl mssql
