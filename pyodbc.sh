@@ -16,3 +16,4 @@ echo conda install pyodbc
 sudo /usr/bin/anaconda/bin/conda install -y -c anaconda pyodbc=3.0.10
 echo conda update libgcc
 sudo /usr/bin/anaconda/bin/conda update -y libgcc
+sudo apt-get -y update
