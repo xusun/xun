@@ -17,3 +17,13 @@ sudo /usr/bin/anaconda/bin/conda install -y -c anaconda pyodbc=3.0.10
 echo conda update libgcc
 sudo /usr/bin/anaconda/bin/conda update -y libgcc
 sudo apt-get -y update
+
+echo apt-get install msodbcsql mssql-tools unixodbc-dev
+sudo ACCEPT_EULA=Y apt-get --assume-yes install msodbcsql=13.1.6.0-1 mssql-tools=14.0.3.0-1 unixodbc-dev 
+
+echo pip install pyodbc
+sudo -H pip install pyodbc
+echo conda install pyodbc
+sudo /usr/bin/anaconda/bin/conda install -y -c anaconda pyodbc=3.0.10
+echo conda update libgcc
+sudo /usr/bin/anaconda/bin/conda update -y libgcc
