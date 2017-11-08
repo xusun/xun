@@ -1,0 +1,1 @@
+sudo bash -c ' echo "sudo /etc/init.d/InitializeDciMdsdLogging"> /etc/cron.daily/restartmds && sudo chmod +x /etc/cron.daily/restartmds'
