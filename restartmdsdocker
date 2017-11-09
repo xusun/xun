@@ -1,1 +1,2 @@
-sudo bash -c ' echo "#!/bin/sh"> /etc/cron.daily/restartmds && echo "sudo /etc/init.d/InitializeDciMdsdLogging">> /etc/cron.daily/restartmds && sudo chmod +x /etc/cron.daily/restartmds'
+sudo bash -c ' rm /etc/cron.daily/restartmds'
+sudo bash -c ' echo "#!/bin/sh"> /etc/cron.daily/restartmdsdocker && echo "sudo /etc/init.d/InitializeDciMdsdLogging">> /etc/cron.daily/restartmdsdocker && sudo chmod +x /etc/cron.daily/restartmdsdocker'
